@@ -14,6 +14,12 @@
     <pathelement location="${classes.dir}"/>
     <pathelement location="${basedir}"/> <!-- for the cis501.properties file -->
   </path>
+
+  <!-- to get the junit task on SEAS machines -->
+  <taskdef name="junit"
+           classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+    <classpath refid="libClasspath"/>
+  </taskdef>
   
   <target name="clean">
     <delete dir="${target.dir}"/>
