@@ -17,7 +17,7 @@ public class MyProperties {
     private static void init() {
         assert !initialized;
         Properties prop = new Properties();
-        String propFileName = "src/cis501.properties";
+        String propFileName = "cis501.properties";
 
         try {
             // read the properties file to trigger any access control exceptions
