@@ -55,10 +55,9 @@ public class MyProperties {
     }
 
     public static int uopLimit() {
-        return 100000; // TODO: don't hard-code this
-        //if (!initialized) { init(); }
+        if (!initialized) { init(); }
 
-        //return runLimit;
+        return runLimit;
     }
 
 }
