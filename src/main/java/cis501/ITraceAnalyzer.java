@@ -36,8 +36,8 @@ public interface ITraceAnalyzer<T extends Uop> {
     public double fractionOfInsnsLteNBytes(int bytes);
 
     /**
-     * Returns the most common category of insns found in the trace, as one of the strings "loads",
+     * Returns the most common category of uops found in the trace, as one of the strings "loads",
      * "stores", "unconditionalbranches", "conditionalbranches" or "other".
      */
-    public String mostCommonInsnCategory();
+    public String mostCommonUopCategory();
 }

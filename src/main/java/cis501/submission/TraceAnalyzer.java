@@ -33,7 +33,7 @@ public class TraceAnalyzer<T extends Uop> implements ITraceAnalyzer<T> {
     }
 
     @Override
-    public String mostCommonInsnCategory() {
+    public String mostCommonUopCategory() {
         return null;
     }
 
