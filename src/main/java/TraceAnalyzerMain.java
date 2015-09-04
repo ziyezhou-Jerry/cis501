@@ -14,6 +14,12 @@ public class TraceAnalyzerMain {
         UopIterator uiter = new UopIterator(MyProperties.traceFile(), MyProperties.uopLimit(), new UopFactory());
         ta.run(uiter);
         System.out.println("Avg insn size is: " + ta.avgInsnSize());
+		for(int i = 1;i<=5;i++)
+		System.out.println("fractionOfBranchTargetsLte "+ i +" bits is: " + ta.fractionOfBranchTargetsLteNBits(i));
+		for(int i = 1;i<=5;i++)
+		System.out.println("fractionOfInsnsLteNBytes "+ i +" bytes is: " + ta.fractionOfInsnsLteNBytes(i));
+		
+		System.out.println("the mostCommonUopCategory is "+ta.mostCommonUopCategory());
     }
 
 }
