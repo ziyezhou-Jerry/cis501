@@ -14,7 +14,7 @@ public interface ITraceAnalyzer<T extends Uop> {
     /**
      * @return the average size of the insns in the trace, in bytes.
      */
-    public double avgInsnSize();
+    public double avgInsnSize(); // size = fallthrough PC - PC
 
     /**
      * Returns the fraction of all branch targets that can be encoded with <= the given number of
@@ -24,7 +24,7 @@ public interface ITraceAnalyzer<T extends Uop> {
      * @param bits a value in the range [1,32]
      * @return a fraction in the range [0,1.0]
      */
-    public double fractionOfBranchTargetsLteNBits(int bits);
+    public double fractionOfBranchTargetsLteNBits(int bits); // bits = 2 + floor(log2(abs(InstructionPC - TargetPC)))
 
     /**
      * Returns the fraction of all insns that are <= the given number of bytes. E.g., with 5 bytes,
